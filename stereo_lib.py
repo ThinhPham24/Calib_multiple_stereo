@@ -2,11 +2,15 @@ import sys
 import cv2
 import numpy as np
 import time
+import os
 #import imutils
-
 # Camera parameters to undistort and rectify images
+calibrated_dir = "Calibrated"
+current_dir = os.getcwd()
+calib_savepath = os.path.join(current_dir, calibrated_dir)
+Img_name = "degree0"
 cv_file = cv2.FileStorage()
-cv_file.open('stereoMap.txt', cv2.FileStorage_READ)
+cv_file.open(calib_savepath + '/'+ str(Img_name) + '/' + 'stereoMap.txt', cv2.FileStorage_READ)
 
 stereoMapL_x = cv_file.getNode('stereoMapL_x').mat()
 stereoMapL_y = cv_file.getNode('stereoMapL_y').mat()

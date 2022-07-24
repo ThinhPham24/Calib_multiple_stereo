@@ -103,7 +103,7 @@ if __name__ == "__main__":
         camera_L_exposureTime = 20000   #for take the chessboard, can neglect
         camera_R_exposureTime = 20000   #for take the chessboard, can neglect
 
-        address = '240degree'
+        address = 'degree240'
 
         gige_camera(serial_number_L, serial_number_R,camera_L_exposureTime,camera_R_exposureTime,address)
 
@@ -124,7 +124,7 @@ if __name__ == "__main__":
         camera_L_exposureTime = 20000   #for take the chessboard, can neglect
         camera_R_exposureTime = 20000   #for take the chessboard, can neglect
 
-        address = '120degree'
+        address = 'degree120'
 
         gige_camera(serial_number_L, serial_number_R, camera_L_exposureTime, camera_R_exposureTime, address)
 
@@ -134,6 +134,6 @@ if __name__ == "__main__":
         camera_L_exposureTime = 20000   #for take the chessboard, can neglect
         camera_R_exposureTime = 20000   #for take the chessboard, can neglect
 
-        address = '0degree'
+        address = 'degree0'
 
         gige_camera(serial_number_L, serial_number_R, camera_L_exposureTime, camera_R_exposureTime, address)
