@@ -7,7 +7,7 @@ Multiple stereo cameras.
 python3 S1_take_normal_image.py
 ```
 * Step 2. Should change its folder name of each view, respectively.
-'''python
+```python
 image_dir = "IMG_VIEWS"
 Img_name = "degree0"
-'''
+```
