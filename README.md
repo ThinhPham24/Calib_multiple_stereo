@@ -11,3 +11,9 @@ python3 S1_take_normal_image.py
 image_dir = "IMG_VIEWS"
 Img_name = "degree0"
 ```
+After that, we will run the code.
+```bash
+python3 S2_stereo_calibration.py
+```
+We will get the results like this.
+
