@@ -5,7 +5,7 @@ from stereo_lib import*
 import os
 #**************
 image_dir = "IMG_VIEWS"
-Img_name = "degree0"
+Img_name = "degree120"
 current_dir = os.getcwd()
 image_savepath = os.path.join(current_dir, image_dir)
 #*************

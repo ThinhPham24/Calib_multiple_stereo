@@ -74,8 +74,10 @@ def gige_camera(serial_number_L, serial_number_R,camera_L_exposureTime,camera_R_
                     os.mkdir(image_savepath + '/' + str(address)) 
                 cv2.imwrite(image_savepath + '/' + str(address) + '/image_L_' + str(num) + '.jpg', imgL_0)
                 cv2.imwrite(image_savepath + '/' + str(address) + '/image_R_' + str(num) + '.jpg', imgR_0)
-                print("images saved!")
+                # print("images saved!")
+                print("number of image", num)
                 num += 1
+                
 
             if k == 27:
                 break
@@ -100,8 +102,8 @@ if __name__ == "__main__":
     if val == '1':
         serial_number_L = "40003776"
         serial_number_R = "40070109"
-        camera_L_exposureTime = 20000   #for take the chessboard, can neglect
-        camera_R_exposureTime = 20000   #for take the chessboard, can neglect
+        camera_L_exposureTime = 15000   #for take the chessboard, can neglect
+        camera_R_exposureTime = 15000   #for take the chessboard, can neglect
 
         address = 'degree240'
 
@@ -110,8 +112,8 @@ if __name__ == "__main__":
     if val == '2':
         serial_number_L = "40118981"
         serial_number_R = "40156407"
-        camera_L_exposureTime = 20000   #for take the chessboard, can neglect
-        camera_R_exposureTime = 20000   #for take the chessboard, can neglect
+        camera_L_exposureTime = 15000   #for take the chessboard, can neglect
+        camera_R_exposureTime = 15000   #for take the chessboard, can neglect
 
         address = 'top'
 
@@ -121,8 +123,8 @@ if __name__ == "__main__":
     if val == '3':
         serial_number_L = "40118988"
         serial_number_R = "40118977"
-        camera_L_exposureTime = 20000   #for take the chessboard, can neglect
-        camera_R_exposureTime = 20000   #for take the chessboard, can neglect
+        camera_L_exposureTime = 15000   #for take the chessboard, can neglect
+        camera_R_exposureTime = 15000   #for take the chessboard, can neglect
 
         address = 'degree120'
 
@@ -131,8 +133,8 @@ if __name__ == "__main__":
     if val == '4':
         serial_number_L = "40156421"
         serial_number_R = "40156409"
-        camera_L_exposureTime = 20000   #for take the chessboard, can neglect
-        camera_R_exposureTime = 20000   #for take the chessboard, can neglect
+        camera_L_exposureTime = 15000   #for take the chessboard, can neglect
+        camera_R_exposureTime = 15000   #for take the chessboard, can neglect
 
         address = 'degree0'
 
