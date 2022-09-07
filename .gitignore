@@ -131,3 +131,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+PLY/de_0.ply
+PLY/de_120.ply
+PLY/de_240.ply
+PLY/de_top_0.ply
+PLY/de_top_120.ply
+PLY/de_top_240.ply
