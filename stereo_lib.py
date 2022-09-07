@@ -10,7 +10,7 @@ import os
 # calib_savepath = os.path.join(current_dir, calibrated_dir)
 # Img_name = "top"
 cv_file = cv2.FileStorage()
-cv_file.open('/home/airlab/Desktop/Calib_multiple_stereo/Calibrated/degree120/stereoMap.txt', cv2.FileStorage_READ)
+cv_file.open('/home/airlab/Desktop/Calib_multiple_stereo/Calibrated/top/stereoMap.txt', cv2.FileStorage_READ)
 
 stereoMapL_x = cv_file.getNode('stereoMapL_x').mat()
 stereoMapL_y = cv_file.getNode('stereoMapL_y').mat()

@@ -202,7 +202,7 @@ class Orchid:
             self.imgs= cv2.cvtColor(self.imgs, cv2.COLOR_BGR2GRAY)
         bitwiseAnd = cv2.bitwise_and(self.img, self.img, mask = self.imgs)
         cv_file = cv2.FileStorage()
-        cv_file.open('/home/airlab/Desktop/Calib_multiple_stereo/Calibrated/degree120/stereoMap.txt', cv2.FileStorage_READ)
+        cv_file.open('/home/airlab/Desktop/Calib_multiple_stereo/Calibrated/top/stereoMap.txt', cv2.FileStorage_READ)
         Q1 = cv_file.getNode('q').mat()
         # print("Q",Q1)
         Q= np.float32([[1, 0, 0, -self.X / 2.0],
@@ -275,13 +275,13 @@ if __name__ == '__main__':
                 print("id camera",cameraContextValue )
                 if cameraContextValue==0:
                     #if 0,120,240 change IR
-                    # frameL = img
-                    frameR = img
+                    frameL = img
+                    # frameR = img
                     # cv2.imshow("frameL", resized_img(frameR,15))
 
                 else:
-                    frameL = img
-                    # frameR = img
+                    # frameL = img
+                    frameR = img
                     # cv2.imshow("frameL", resized_img(frameL,15))
                     cv2.imwrite('images/R-test.png'.format(id_image),frameR)
                     cv2.imwrite('images/L-test.png'.format(id_image),frameL)
@@ -312,15 +312,15 @@ if __name__ == '__main__':
     pcd.colors = o3d.utility.Vector3dVector(colors)
     o3d.visualization.draw_geometries([pcd])
      
-    write_ply('PLY/de_120.ply',points_all,colors_all)
+    write_ply('PLY/chessboard_top.ply',points_all,colors_all)
 
 
     cv_file = cv2.FileStorage()
-    cv_file.open('/home/airlab/Desktop/Calib_multiple_stereo/Calibrated/degree120/stereoMap.txt', cv2.FileStorage_READ)
+    cv_file.open('/home/airlab/Desktop/Calib_multiple_stereo/Calibrated/top/stereoMap.txt', cv2.FileStorage_READ)
     Q = cv_file.getNode('q').mat()
     imgpointsL, imgpointsR = checker_detect(imgL,imgR)
     disparity_coors, disparity_points =compute_Disparity(imgpointsL, imgpointsR)
 
     points, colors = compute3D(disparity_coors, disparity_points, Q)
-    write_ply('PLY/checker_120.ply',np.asarray(points), np.asarray(colors))
+    write_ply('PLY/chessboard_checker_top.ply',np.asarray(points), np.asarray(colors))
     cv2.destroyAllWindows()
