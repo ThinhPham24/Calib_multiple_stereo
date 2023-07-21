@@ -17,5 +17,6 @@ python3 S2_stereo_calibration.py
 ```
 We will get the result like this.
 ![The results](https://github.com/ThinhPham24/Calib_multiple_stereo/blob/master/IMAGES_GUI/Matrix.jpg)
+
 2. STAGE 2: Find the transformation matrix of each side view (pair camera) to convert to Top view
 * Step 1. 
